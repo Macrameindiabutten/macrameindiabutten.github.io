@@ -1,0 +1,29 @@
+media:
+  input: media
+  output: /notes/media
+  extensions: [jpg, jpeg, png, webp, gif]
+  rename: safe
+content:
+  - name: page
+    label: Текст и картинки
+    type: file
+    path: content.json
+    format: json
+    fields:
+      - name: title
+        label: Название страницы
+        type: string
+        required: true
+      - name: body
+        label: Текст страницы
+        type: rich-text
+        options:
+          format: html
+      - name: table_title
+        label: Название таблицы
+        type: string
+  - name: table
+    label: Таблица
+    type: file
+    path: table.csv
+    format: datagrid
