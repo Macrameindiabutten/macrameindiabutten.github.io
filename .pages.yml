@@ -1,30 +1,40 @@
 media:
   input: media
   output: /media
-  extensions: [jpg, jpeg, png, webp, gif]
+  extensions:
+  - jpg
+  - jpeg
+  - png
+  - webp
+  - gif
   rename: safe
 content:
-  - name: page
-    label: Текст и картинки
-    type: file
-    path: content.json
-    format: json
-    fields:
-      - name: title
-        label: Название страницы
-        type: string
-        required: true
-      - name: body
-        label: Текст страницы
-        type: rich-text
-        options:
-          format: html
-      - name: table_title
-        label: Название таблицы
-        type: string
-  - name: table
+- name: page
+  label: Текст и картинки
+  type: file
+  path: content.json
+  format: json
+  fields:
+  - name: title
+    label: Название страницы
+    type: string
+    required: true
+  - name: body
+    label: Текст страницы
+    type: rich-text
+    options:
+      format: html
+  - name: table_title
+    label: Название таблицы
+    type: string
+- name: table
+  label: Таблица
+  type: file
+  path: table.json
+  format: json
+  fields:
+  - name: body
     label: Таблица
-    type: file
-    path: table.csv
-    format: datagrid
-
+    type: rich-text
+    options:
+      format: html
