@@ -1,6 +1,6 @@
 media:
   input: media
-  output: /notes/media
+  output: /media
   extensions: [jpg, jpeg, png, webp, gif]
   rename: safe
 content:
@@ -27,3 +27,4 @@ content:
     type: file
     path: table.csv
     format: datagrid
+
